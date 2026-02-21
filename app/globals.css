@@ -5,20 +5,25 @@
 
 :root {
   /* --background: oklch(0.985 0.002 247); */
-  --background: #EFF9FF;
-  --foreground: oklch(0.145 0.005 247);
+  --background: #FFF;
+  /* --foreground: oklch(0.145 0.005 247); */
+  --foreground: oklch(0.1298 0.0425 265.13);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0.005 247);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0.005 247);
-  --primary: rgb(25, 120, 229);
+  --primary: #3b82f6;
   --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.96 0.01 247);
+  /* --secondary: oklch(0.96 0.01 247); */
+  --secondary: oklch(0.7535 0.139 232.66);
   --secondary-foreground: oklch(0.25 0.005 247);
-  --muted: oklch(0.94 0.01 247);
-  --muted-foreground: oklch(0.45 0.01 247);
+  /* --muted: oklch(0.94 0.01 247); */
+  --muted: oklch(0.9764 0.0133 233.74);
+  /* --muted-foreground: oklch(0.45 0.01 247); */
+  --muted-foreground: oklch(0.4454 0.043 257.42);
+  /* --accent: rgb(89, 201, 251); */
   --accent: rgb(89, 201, 251);
-  --accent-foreground: oklch(0.15 0.05 195);
+  --accent-foreground: rgb(0, 215, 232);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.577 0.245 27.325);
   --border: oklch(0.90 0.01 247);

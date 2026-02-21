@@ -20,12 +20,6 @@ export function Navbar() {
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
         <div className="flex lg:flex-1">
           <Link href="/" className="flex items-center gap-2 -m-1.5 p-1.5">
-            {/* <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-primary">
-              <Heart className="w-5 h-5 text-primary-foreground" />
-            </div>
-            <span className="text-xl font-bold text-foreground">
-              Mentor<span className="text-primary">Salud</span>
-            </span> */}
             <Image
               src="/images/logos/mentorsalud-logo.png"
               alt="Mentor Salud"
@@ -78,12 +72,12 @@ export function Navbar() {
           <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-background px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-border">
             <div className="flex items-center justify-between">
               <Link href="/" className="flex items-center gap-2 -m-1.5 p-1.5">
-                <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-primary">
-                  <Heart className="w-5 h-5 text-primary-foreground" />
-                </div>
-                <span className="text-xl font-bold text-foreground">
-                  Mentor<span className="text-primary">Salud</span>
-                </span>
+                <Image
+                  src="/images/logos/mentorsalud-logo.png"
+                  alt="Mentor Salud"
+                  width={75}
+                  height={75}
+                />
               </Link>
               <button
                 type="button"

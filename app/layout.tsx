@@ -6,7 +6,7 @@ import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 // const _inter = Inter({ subsets: ["latin"] });
-const _geist = Geist({ subsets: ["latin"] });
+const _geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
   title: "Mentor Salud | Tu salud, tu historial, en un solo lugar",
@@ -54,7 +54,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={`font-sans antialiased`}>
+      <body className={`${_geist.variable} ${_geist.className} font-sans antialiased`}>
         {children}
         <Analytics />
       </body>

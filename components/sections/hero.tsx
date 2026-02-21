@@ -11,7 +11,7 @@ const features = [
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
+    <section className="relative min-h-fit flex items-center pt-20 overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-accent/5" />
 
@@ -28,8 +28,7 @@ export function Hero() {
             </div> */}
 
             <h1 className="text-4xl sm:text-5xl tracking-tight text-foreground text-balance lg:text-7xl font-extrabold">
-              Tu salud, tu historial,{" "}
-              <span className="text-primary">en un solo lugar</span>
+              Tu salud, <span className="text-secondary">en un solo lugar</span>
             </h1>
 
             <p className="mt-6 text-muted-foreground leading-relaxed text-lg">
@@ -73,11 +72,11 @@ export function Hero() {
               {/* Main image */}
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/hero-doctor.jpg"
-                  alt="Doctor profesional de Mentor Salud"
+                  src="/images/hero-mentor-salud.png"
+                  alt="Mentor Salud - Tu salud, tu historial, en un solo lugar"
                   width={600}
-                  height={700}
-                  className="object-cover w-full h-auto"
+                  height={600}
+                  className="object-cover w-full h-full"
                   priority
                 />
               </div>

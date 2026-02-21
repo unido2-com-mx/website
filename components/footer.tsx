@@ -5,27 +5,31 @@ import { Heart, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 const footerNavigation = {
   company: [
     { name: "Sobre nosotros", href: "/nosotros" },
-    { name: "Especialistas", href: "/especialistas" },
-    { name: "Blog", href: "/blog" },
-    { name: "FAQ", href: "/faq" },
+    // { name: "Especialistas", href: "/especialistas" },
+    // { name: "Blog", href: "/blog" },
+    // { name: "FAQ", href: "/faq" },
   ],
   services: [
     { name: "Historial médico", href: "/funcionalidades#historial" },
     { name: "Perfil de salud", href: "/funcionalidades#perfil" },
     { name: "Grupos de apoyo", href: "/funcionalidades#grupos" },
-    { name: "Planes de salud", href: "/planes" },
-    { name: "Tienda", href: "/tienda" },
+    // { name: "Planes de salud", href: "/planes" },
+    // { name: "Tienda", href: "/tienda" },
   ],
   legal: [
-    { name: "Privacidad", href: "/privacidad" },
-    { name: "Términos", href: "/terminos" },
-    { name: "Cookies", href: "/cookies" },
+    {
+      name: "Privacidad",
+      href: "https://mentor-salud.s3.us-east-2.amazonaws.com/AVISO_PACIENTES.pdf",
+    },
+    // { name: "Términos", href: "/terminos" },
+    // { name: "Cookies", href: "/cookies" },
   ],
   social: [
-    { name: "Facebook", href: "#", icon: Facebook },
-    { name: "Twitter", href: "#", icon: Twitter },
-    { name: "Instagram", href: "#", icon: Instagram },
-    { name: "LinkedIn", href: "#", icon: Linkedin },
+    {
+      name: "Facebook",
+      href: "https://www.facebook.com/share/1BPpyKUA3T/?mibextid=wwXIfr",
+      icon: Facebook,
+    },
   ],
 };
 
@@ -36,12 +40,6 @@ export function Footer() {
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-6">
             <Link href="/" className="flex items-center gap-2">
-              {/* <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-primary">
-                <Heart className="w-5 h-5 text-primary-foreground" />
-              </div>
-              <span className="text-xl font-bold text-foreground">
-                Mentor<span className="text-primary">Salud</span>
-              </span> */}
               <Image
                 src="/images/logos/mentorsalud-logo.png"
                 alt="Mentor Salud"
@@ -58,6 +56,8 @@ export function Footer() {
                 <Link
                   key={item.name}
                   href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   <span className="sr-only">{item.name}</span>
@@ -112,6 +112,8 @@ export function Footer() {
                     <li key={item.name}>
                       <Link
                         href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                       >
                         {item.name}
@@ -120,7 +122,7 @@ export function Footer() {
                   ))}
                 </ul>
               </div>
-              <div className="mt-10 md:mt-0">
+              {/* <div className="mt-10 md:mt-0">
                 <h3 className="text-sm font-semibold text-foreground">
                   Contacto
                 </h3>
@@ -135,7 +137,7 @@ export function Footer() {
                     Ciudad de México, México
                   </li>
                 </ul>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

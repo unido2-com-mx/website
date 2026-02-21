@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 
 const logos = [
@@ -12,105 +10,58 @@ const logos = [
     name: "Aerosol Medical Systems",
     image: "/images/logos/ams-logo.jpeg",
     grayscale: true,
-    displayName: "Aerosol Medical\nSystems",
+    displayName: "Aerosol Medical Systems",
   },
   {
     name: "Boehringer Ingelheim",
     image: "/images/logos/boehringer-logo.png",
     grayscale: true,
-    displayName: "Boehringer\nIngelheim",
   },
   {
     name: "Hygeia",
     image: "/images/logos/hygeia-logo.png",
     grayscale: true,
-    displayName: "Hygeia",
   },
   {
     name: "SMNYCT",
     image: "/images/logos/smnyct-logo.png",
     grayscale: true,
-    displayName: "Sociedad Mexicana de\nNeumología y Cirugía\nde Tórax",
+    displayName: "Sociedad Mexicana de Neumología\ny Cirugíade Tórax",
   },
 ];
 
 export function TrustedBy() {
   return (
-    <section className="py-16 lg:py-20 bg-background overflow-hidden">
+    <section className="py-16 lg:py-20 bg-background">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <p className="text-center text-2xl font-medium text-muted-foreground mb-10">
+        <p className="text-center text-sm font-medium text-muted-foreground mb-10">
           Ellos confían en nosotros
         </p>
 
-        <div className="relative">
-          {/* Gradient overlays */}
-          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10" />
-          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10" />
-
-          {/* Infinite scroll container */}
-          <div className="flex overflow-hidden">
-            <div className="flex animate-marquee gap-12">
-              {[...logos, ...logos].map((logo, index) => (
-                <div
-                  key={`${logo.name}-${index}`}
-                  className="flex flex-col items-center justify-center px-6 py-4 rounded-xl bg-card border border-border min-w-fit gap-2"
-                >
-                  <Image
-                    src={logo.image}
-                    alt={logo.name}
-                    width={100}
-                    height={60}
-                    className={`h-12 object-contain ${logo.grayscale ? "grayscale" : ""}`}
-                  />
-                  {logo.displayName && (
-                    <p className="text-xs text-center text-muted-foreground font-medium leading-tight whitespace-pre-line">
-                      {logo.displayName}
-                    </p>
-                  )}
-                </div>
-              ))}
-            </div>
+        <div className="flex flex-wrap lg:flex-nowrap items-stretch justify-center gap-6 lg:gap-10">
+          {logos.map((logo) => (
             <div
-              className="flex animate-marquee gap-12 ml-12"
-              aria-hidden="true"
+              key={logo.name}
+              className="flex flex-col items-center justify-center w-60 h-40 px-6 py-4 rounded-xl bg-card border border-border gap-2"
             >
-              {[...logos, ...logos].map((logo, index) => (
-                <div
-                  key={`${logo.name}-duplicate-${index}`}
-                  className="flex flex-col items-center justify-center px-6 py-4 rounded-xl bg-card border border-border min-w-fit gap-2"
-                >
-                  <Image
-                    src={logo.image}
-                    alt={logo.name}
-                    width={100}
-                    height={60}
-                    className={`h-12 object-contain ${logo.grayscale ? "grayscale" : ""}`}
-                  />
-                  {logo.displayName && (
-                    <p className="text-xs text-center text-muted-foreground font-medium leading-tight whitespace-pre-line">
-                      {logo.displayName}
-                    </p>
-                  )}
-                </div>
-              ))}
+              <Image
+                src={logo.image}
+                alt={logo.name}
+                width={logo.name === "Hygeia" ? 140 : 120}
+                height={logo.name === "Hygeia" ? 70 : 60}
+                className={`${logo.name === "Hygeia" ? "h-14" : "h-12"} w-auto object-contain ${
+                  logo.grayscale ? "grayscale" : ""
+                }`}
+              />
+              {logo.displayName && (
+                <p className="text-xs text-center text-muted-foreground font-medium leading-tight whitespace-pre-line">
+                  {logo.displayName}
+                </p>
+              )}
             </div>
-          </div>
+          ))}
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes marquee {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-100%);
-          }
-        }
-        .animate-marquee {
-          animation: marquee 30s linear infinite;
-        }
-      `}</style>
     </section>
   );
 }
