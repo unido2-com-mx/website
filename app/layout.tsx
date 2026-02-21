@@ -9,9 +9,9 @@ import "./globals.css";
 const _geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
-  title: "Mentor Salud | Tu salud, tu historial, en un solo lugar",
+  title: "Mentor Salud | Tu salud en un solo lugar",
   description:
-    "Plataforma digital que conecta pacientes y médicos con herramientas de comunicación y seguimiento efectivas. Historial médico, citas, recetas y más.",
+    "Conectamos pacientes y médicos con herramientas de comunicación y seguimiento efectivas. Historial médico, citas, recetas y más.",
   generator: "v0.app",
   keywords: [
     "salud",
