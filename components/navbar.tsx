@@ -54,7 +54,7 @@ export function Navbar() {
 
         <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-4">
           <Button variant="ghost" asChild>
-            <Link href="/login">Iniciar sesión</Link>
+            <Link href="/registro">Iniciar sesión</Link>
           </Button>
           <Button asChild>
             <Link href="/registro">Regístrate</Link>
@@ -108,7 +108,7 @@ export function Navbar() {
                     className="w-full bg-transparent"
                     asChild
                   >
-                    <Link href="/login">Iniciar sesión</Link>
+                    <Link href="/registro">Iniciar sesión</Link>
                   </Button>
                   <Button className="w-full" asChild>
                     <Link href="/registro">Regístrate</Link>
