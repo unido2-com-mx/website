@@ -13,6 +13,20 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/registro",
+        destination: "https://app.mentorsalud.com",
+        permanent: true,
+      },
+      {
+        source: "/registro/:path*",
+        destination: "https://app.mentorsalud.com",
+        permanent: true,
+      },
+    ]
+  },
 }
 
 export default nextConfig

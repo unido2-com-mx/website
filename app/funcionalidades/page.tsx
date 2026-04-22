@@ -25,6 +25,8 @@ export const metadata: Metadata = {
     "Descubre todas las funcionalidades de Mentor Salud: historial médico, perfil de salud, grupos de apoyo, material educativo y foros moderados.",
 };
 
+const APP_URL = "https://app.mentorsalud.com";
+
 const mainFeatures = [
   {
     id: "historial",
@@ -210,8 +212,8 @@ export default function FeaturesPage() {
                   {feature.details}
                 </p>
                 <Button className="mt-8 group" asChild>
-                  <Link href="/registro">
-                    Comenzar ahora
+                  <Link href={APP_URL}>
+                    Abrir app
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Link>
                 </Button>
@@ -284,8 +286,8 @@ export default function FeaturesPage() {
             </p>
             <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
               <Button size="lg" variant="secondary" asChild className="group">
-                <Link href="/registro">
-                  Crear cuenta gratis
+                <Link href={APP_URL}>
+                  Ir a la app
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
               </Button>

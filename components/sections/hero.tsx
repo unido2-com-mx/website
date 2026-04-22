@@ -3,6 +3,8 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle } from "lucide-react";
 
+const APP_URL = "https://app.mentorsalud.com";
+
 const features = [
   "Historial médico completo",
   "Seguimiento de citas",
@@ -51,8 +53,8 @@ export function Hero() {
 
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
               <Button size="lg" asChild className="group">
-                <Link href="/registro">
-                  Comienza gratis
+                <Link href={APP_URL}>
+                  Entrar a la app
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
               </Button>

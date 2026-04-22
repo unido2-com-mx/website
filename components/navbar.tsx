@@ -6,6 +6,8 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+const APP_URL = "https://app.mentorsalud.com";
+
 const navigation = [
   { name: "Inicio", href: "/" },
   { name: "Sobre nosotros", href: "/nosotros" },
@@ -79,10 +81,10 @@ export function Navbar() {
 
         <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-4">
           <Button variant="ghost" asChild>
-            <Link href="/registro">Iniciar sesión</Link>
+            <Link href={APP_URL}>Iniciar sesión</Link>
           </Button>
           <Button asChild>
-            <Link href="/registro">Regístrate</Link>
+            <Link href={APP_URL}>Abrir app</Link>
           </Button>
         </div>
       </nav>
@@ -129,13 +131,13 @@ export function Navbar() {
 
             <div className="mt-6 grid gap-3">
               <Button variant="outline" className="w-full bg-transparent" asChild>
-                <Link href="/registro" onClick={() => setMobileMenuOpen(false)}>
+                <Link href={APP_URL} onClick={() => setMobileMenuOpen(false)}>
                   Iniciar sesión
                 </Link>
               </Button>
               <Button className="w-full" asChild>
-                <Link href="/registro" onClick={() => setMobileMenuOpen(false)}>
-                  Regístrate
+                <Link href={APP_URL} onClick={() => setMobileMenuOpen(false)}>
+                  Abrir app
                 </Link>
               </Button>
             </div>

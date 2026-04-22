@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Heart, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Facebook } from "lucide-react";
+
+const APP_URL = "https://app.mentorsalud.com";
 
 const footerNavigation = {
   company: [
@@ -51,6 +53,12 @@ export function Footer() {
               Conectamos pacientes y médicos con herramientas de comunicación y
               seguimiento efectivas para una mejor atención de tu salud.
             </p>
+            <Link
+              href={APP_URL}
+              className="inline-flex text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+            >
+              Ir a la app
+            </Link>
             <div className="flex gap-4">
               {footerNavigation.social.map((item) => (
                 <Link
